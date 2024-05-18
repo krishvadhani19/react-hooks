@@ -1,3 +1,4 @@
+import TogglePage from "../pages/TogglePage/TogglePage";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -8,7 +9,7 @@ const rootRouter = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="hooks">
-        <Route path="useToggle" element={<div>Hello</div>} />
+        <Route path="useToggle" element={<TogglePage />} />
       </Route>
     </>
   )
