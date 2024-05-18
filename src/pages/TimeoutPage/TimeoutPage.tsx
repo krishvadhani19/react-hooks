@@ -1,15 +1,17 @@
 import { useState } from "react";
+import useTimeout from "../../hooks/useTimeout";
 
 const Timeout = () => {
   const [count, setCount] = useState<number>(10);
+  const { clear, reset } = useTimeout(() => setCount(0), 1000);
 
   return (
     <div>
       <div>{count}</div>
 
       <button onClick={() => setCount((c) => c + 1)}>Increment</button>
-      <button>Clear Timeout</button>
-      <button>Reset Timeout</button>
+      <button onClick={clear}>Clear Timeout</button>
+      <button onClick={reset}>Reset Timeout</button>
     </div>
   );
 };
