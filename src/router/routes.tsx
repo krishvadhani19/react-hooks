@@ -1,6 +1,7 @@
 import TogglePage from "../pages/TogglePage/TogglePage";
 import TimeoutPage from "../pages/TimeoutPage/TimeoutPage";
-import Page from "../pages/UseEffectOncePage/UseEffectOncePage";
+import UseEffectOncePage from "../pages/UseEffectOncePage/UseEffectOncePage";
+import UseArrayPage from "../pages/UseArrayPage/UseArrayPage";
 
 import {
   createBrowserRouter,
@@ -14,7 +15,8 @@ const rootRouter = createBrowserRouter(
       <Route path="hooks">
         <Route path="useToggle" element={<TogglePage />} />
         <Route path="useTimeout" element={<TimeoutPage />} />
-        <Route path="useEffectOnce" element={<Page />} />
+        <Route path="useEffectOnce" element={<UseEffectOncePage />} />
+        <Route path="useArray" element={<UseArrayPage />} />
       </Route>
     </>
   )
